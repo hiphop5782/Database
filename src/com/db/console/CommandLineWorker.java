@@ -38,8 +38,8 @@ public class CommandLineWorker{
 		int emptyRowCount = 0;
 		StringBuffer buffer = new StringBuffer();
 		while(true){
-			String msg = rowCount>1?rowCount+")":CMDSTRING;
-			CommandLogger.prefer(msg+" ");
+			String msg = rowCount>1?"("+rowCount+")\t":CMDSTRING;
+			CommandLogger.prefer(msg);
 			String command = reader.nextLine();
 			buffer.append(command);
 			rowCount++;
