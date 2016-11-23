@@ -9,7 +9,7 @@ public class Exam01_FilteringCommand {
 		String command3 = "검색(simple)[\"id\":\"test\"";
 		String command4 = "삭제(simple)[\"id\":\"test\"";
 		String command5 = "수정(simple){\"money\":5000}[\"id\":\"test\"]";
-		String regex = "^(추가|목록|검색|삭제|수정)\\(\\w{1,}\\).*$";
+		String regex = "^(추가|목록|검색|삭제|수정)\\(\\w+\\)(\\[\\w+\\])?$";
 		boolean flag;
 		flag = Pattern.matches(regex, command1);
 		System.out.println(flag);
